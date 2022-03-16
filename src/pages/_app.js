@@ -5,6 +5,7 @@ import { SearchProvider } from 'hooks/use-search';
 
 import { getSiteMetadata } from 'lib/site';
 import { getRecentPosts } from 'lib/posts';
+import { getTopLevelPages } from 'lib/pages';
 import { getCategories } from 'lib/categories';
 import NextNProgress from 'nextjs-progressbar';
 import { getAllMenus, createMenuFromPages, MENU_LOCATION_NAVIGATION_DEFAULT } from 'lib/menus';
