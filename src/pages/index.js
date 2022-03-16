@@ -19,18 +19,7 @@ export default function Home({ posts, pagination }) {
     <Layout>
       <WebsiteJsonLd siteTitle={title} />
       <Header>
-        <h1
-          dangerouslySetInnerHTML={{
-            __html: title,
-          }}
-        />
-
-        <p
-          className={styles.description}
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-        />
+     
       </Header>
 
       <Section>
