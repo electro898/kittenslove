@@ -14,7 +14,6 @@ import Header from 'components/Header';
 import Section from 'components/Section';
 import Container from 'components/Container';
 import Content from 'components/Content';
-import Metadata from 'components/Metadata';
 import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
