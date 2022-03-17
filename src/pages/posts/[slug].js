@@ -19,18 +19,21 @@ import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
 
-import { GetServerSideProps } from 'next'
 
-export const getServerSideProps: GetServerSideProps = async () => {
-	// check if the user is logged in
-	const ifAuthenticated = false
+import React, { useEffect } from "react";
+import Router from "next/router";
 
-	if (ifAuthenticated) {
-		return { redirect: { destination: '/login', permanent: false } }
-	}
+const Comp = () => {
+  //...
+  useEffect(() => {
+    const { pathname } = Router;
+    if (pathname === "/") {
+      Router.push("/hello-nextjs");
+    }
+  });
+  //...
+};
 
-	return { props: {} }
-}
 
 export default function Post({ post, socialImage, related }) {
   const {
