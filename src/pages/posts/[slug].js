@@ -39,7 +39,7 @@ export default function Post({ post, socialImage, related }) {
     post.og = {};
   }
 
-  post.og.imageUrl = `${homepage}${socialImage}`;
+  post.og.imageUrl = `${featuredImage.sourceUrl}`;
   post.og.imageSecureUrl = post.og.imageUrl;
   post.og.imageWidth = 1200;
   post.og.imageHeight = 630;
