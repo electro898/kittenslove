@@ -19,23 +19,6 @@ import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
 
-export async function getServerSideProps(context) {
-  const res = await fetch('https://.../data')
-  const data = await res.json()
-  if (!data) {
-    return {
-      redirect: {
-        destination: '/hello-nextjs',
-        permanent: false,
-      },
-    }
-  }
-
-  return {
-    props: {},
-  }
-}
-
 export default function Post({ post, socialImage, related }) {
   const {
     title,
