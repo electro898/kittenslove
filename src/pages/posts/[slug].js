@@ -29,9 +29,8 @@ function IndexPage() {
     </div>
   )
 }
-export default IndexPage
 
-export default function Post({ post, related }) {
+export default function IndexPage Post({ post, related }) {
   const {
     title,
     metaTitle,
