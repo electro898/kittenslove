@@ -14,7 +14,7 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
     return [
       {
         source: '/posts/:slug*',
-        destination: '/news/:slug*',
+        destination: '/posts/${post.node.id}',
         permanent: false,
       },
 
