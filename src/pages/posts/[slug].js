@@ -19,22 +19,6 @@ import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
 
-
-import React, { useEffect } from 'react';
-import Router from 'next/router';
-
-const Comp = () => {
-  //...
-  useEffect(() => {
-    const { pathname } = Router;
-    if (pathname === '/') {
-      Router.push('/hello-nextjs');
-    }
-  });
-  //...
-};
-
-
 export default function Post({ post, socialImage, related }) {
   const {
     title,
