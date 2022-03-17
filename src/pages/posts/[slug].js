@@ -6,6 +6,7 @@ import { categoryPathBySlug } from 'lib/categories';
 import { formatDate } from 'lib/datetime';
 import { ArticleJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
+import useSite from 'hooks/use-site';
 import usePageMetadata from 'hooks/use-page-metadata';
 
 import Layout from 'components/Layout';
@@ -18,7 +19,7 @@ import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
 
-export default function Post({ post, related }) {
+export default function Post({ post, socialImage, related }) {
   const {
     title,
     metaTitle,
@@ -32,11 +33,13 @@ export default function Post({ post, related }) {
     isSticky = false,
   } = post;
 
+  const { metadata: siteMetadata = {}, homepage } = useSite();
+
   if (!post.og) {
     post.og = {};
   }
 
-  post.og.imageUrl = `${featuredImage.sourceUrl}`;
+  post.og.imageUrl = `${homepage}${socialImage}`;
   post.og.imageSecureUrl = post.og.imageUrl;
   post.og.imageWidth = 1200;
   post.og.imageHeight = 630;
