@@ -1,4 +1,3 @@
-import { getPostBySlug, getAllPosts, getRelatedPosts, postPathBySlug } from 'lib/posts';
 import { categoryPathBySlug } from 'lib/categories';
 
 export async function getStaticProps({ params = {} } = {}) {
