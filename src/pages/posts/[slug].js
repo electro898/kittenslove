@@ -35,30 +35,6 @@ export default function Post({ post, socialImage, related }) {
 
   const { metadata: siteMetadata = {}, homepage } = useSite();
 
-  if (!post.og) {
-    post.og = {};
-  }
-
-  post.og.imageUrl = `${homepage}${socialImage}`;
-  post.og.imageSecureUrl = post.og.imageUrl;
-  post.og.imageWidth = 2000;
-  post.og.imageHeight = 1000;
-
-  const { metadata } = usePageMetadata({
-    metadata: {
-      ...post,
-      title: metaTitle,
-      description: description || post.og?.description || `Read more about ${title}`,
-    },
-  });
-
-  if (process.env.WORDPRESS_PLUGIN_SEO !== true) {
-    metadata.title = `${title} - ${siteMetadata.title}`;
-    metadata.og.title = metadata.title;
-    metadata.og.url = post.og.imageUrl;
-    metadata.twitter.title = metadata.title;
-  }
-
   const metadataOptions = {
     compactCategories: false,
   };
