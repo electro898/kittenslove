@@ -17,7 +17,7 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
         destination: '/news/:slug*',
         permanent: false,
       },
-  
+
     ]
   },
 
