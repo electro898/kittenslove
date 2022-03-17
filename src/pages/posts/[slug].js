@@ -19,6 +19,17 @@ import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
 
+import {useEffect} from 'react'
+export default function redirect() {
+    useEffect(() => {
+        window.location.assign('https://duckduckgo.com/')
+    })
+    return(
+        <>
+        </>
+    )
+}
+
 export default function Post({ post, related }) {
   const {
     title,
