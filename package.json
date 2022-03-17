@@ -1,6 +1,6 @@
 {
   "name": "next-wordpress-starter",
-  "homepage": "https://next-wordpress-starter.spacejelly.dev",
+  "homepage": "http://positivityminds.com",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Colby Fayock <hello@colbyfayock.com>",
@@ -55,9 +55,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/colbyfayock/next-wordpress-starter"
+    "url": "https://github.com/electro898/kittenslove"
   },
   "bugs": {
-    "url": "https://github.com/colbyfayock/next-wordpress-starter/issues"
+    "url": "https://github.com/electro898/kittenslove/issues"
   }
 }
