@@ -9,6 +9,17 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
   // By default, Next.js removes the trailing slash. One reason this would be good
   // to include is by default, the `path` property of the router for the homepage
   // is `/` and by using that, would instantly create a redirect
+  
+  async redirects() {
+    return [
+      {
+        source: '/post/:slug*',
+        destination: '/news/:slug*',
+        permanent: false,
+      },
+  
+    ]
+  },
 
   trailingSlash: true,
 
