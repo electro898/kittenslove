@@ -43,6 +43,8 @@ export default function Post({ post, socialImage, related }) {
   post.og.imageSecureUrl = post.og.imageUrl;
   post.og.imageWidth = 1200;
   post.og.imageHeight = 630;
+  post.og.type = video.other;
+  <meta property="fb:app_id" content="157707192482438"></meta>
 
   const { metadata } = usePageMetadata({
     metadata: {
