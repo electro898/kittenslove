@@ -10,7 +10,7 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/categories/amazing-animals/',
+        source: '/',
         destination: 'http://positivityminds.com',
         permanent: true
       },
