@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
-import Head from 'next/head'
 import { getPostBySlug, getAllPosts, getRelatedPosts, postPathBySlug } from 'lib/posts';
 import { categoryPathBySlug } from 'lib/categories';
 import { formatDate } from 'lib/datetime';
