@@ -22,8 +22,6 @@ import styles from 'styles/pages/Post.module.scss';
 export default function Post({ post, socialImage, related }) {
   const {
     title,
-    metaTitle,
-    description,
     content,
     date,
     author,
@@ -33,6 +31,20 @@ export default function Post({ post, socialImage, related }) {
     isSticky = false,
   } = post;
 
+  const { metadata: siteMetadata = {}, homepage } = useSite();
+
+  if (!post.og) {
+    post.og = {};
+  }
+  
+  const metadataOptions = {
+    compactCategories: false,
+  };
+
+  const { posts: relatedPostsList, title: relatedPostsTitle } = related || {};
+
+  const helmetSettings = helmetSettingsFromMetadata(metadata);
+
   return (
     <Layout>
       <Helmet {...helmetSettings} />
@@ -40,6 +52,27 @@ export default function Post({ post, socialImage, related }) {
       <ArticleJsonLd post={post} siteTitle={siteMetadata.title} />
 
       <Header>
+        {featuredImage && (
+          <FeaturedImage
+            {...featuredImage}
+            src={featuredImage.sourceUrl}
+            dangerouslySetInnerHTML={featuredImage.caption}
+          />
+        )}
+        <h1
+          className={styles.title}
+          dangerouslySetInnerHTML={{
+            __html: title,
+          }}
+        />
+        <Metadata
+          className={styles.postMetadata}
+          date={date}
+          author={author}
+          categories={categories}
+          options={metadataOptions}
+          isSticky={isSticky}
+        />
       </Header>
 
       <Content>
