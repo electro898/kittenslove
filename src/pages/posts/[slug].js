@@ -18,9 +18,9 @@ import Metadata from 'components/Metadata';
 import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
-
 import {useEffect} from 'react'
-export default function redirect() {
+
+export async function redirect() {
     useEffect(() => {
         window.location.assign('https://duckduckgo.com/')
     })
