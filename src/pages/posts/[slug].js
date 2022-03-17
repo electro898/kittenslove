@@ -19,6 +19,19 @@ import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
 
+module.exports = {
+
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: 'https://google.com/about',
+        permanent: false
+      }
+    ];
+  }
+};
+
 export default function Post({ post, related }) {
   const {
     title,
