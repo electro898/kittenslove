@@ -5,19 +5,6 @@ const feed = require('./plugins/feed');
 const sitemap = require('./plugins/sitemap');
 const socialImages = require('./plugins/socialImages');
 
-module.exports = {
-
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: 'http://positivityminds.com',
-        permanent: true
-      },
-    ];
-  }
-};
-
 module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]], {
   // By default, Next.js removes the trailing slash. One reason this would be good
   // to include is by default, the `path` property of the router for the homepage
