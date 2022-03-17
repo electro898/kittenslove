@@ -32,7 +32,6 @@ export default function Post({ post, related }) {
     isSticky = false,
   } = post;
 
-
   if (!post.og) {
     post.og = {};
   }
