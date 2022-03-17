@@ -23,7 +23,7 @@ export default function Home({ posts, pagination }) {
 
       <Section>
         <Container>
-          <h2 className="sr-only">Posts</h2>
+          <h2 className="sr-only">Latest Posts</h2>
           <ul className={styles.posts}>
             {posts.map((post) => {
               return (
