@@ -43,6 +43,7 @@ export default function Post({ post, socialImage, related }) {
   post.og.imageSecureUrl = post.og.imageUrl;
   post.og.imageWidth = 2000;
   post.og.imageHeight = 1000;
+  post.og.url = `${homepage}${socialImage}`;
 
   const { metadata } = usePageMetadata({
     metadata: {
