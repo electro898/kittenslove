@@ -35,6 +35,10 @@ export default function Post({ post, related }) {
 
   const { metadata: siteMetadata = {} } = useSite();
 
+  if (!post.og) {
+    post.og = {};
+  }
+
   post.og.imageUrl = `${featuredImage.sourceUrl}`;
   post.og.imageSecureUrl = post.og.imageUrl;
   post.og.imageWidth = 1200;
