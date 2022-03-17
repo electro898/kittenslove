@@ -13,7 +13,7 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
   async redirects() {
     return [
       {
-        source: '/post/:slug*',
+        source: '/posts/:slug*',
         destination: '/news/:slug*',
         permanent: false,
       },
