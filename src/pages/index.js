@@ -19,11 +19,23 @@ export default function Home({ posts, pagination }) {
     <Layout>
       <WebsiteJsonLd siteTitle={title} />
       <Header>
+        <h1
+          dangerouslySetInnerHTML={{
+            __html: title,
+          }}
+        />
+
+        <p
+          className={styles.description}
+          dangerouslySetInnerHTML={{
+            __html: description,
+          }}
+        />
       </Header>
 
       <Section>
         <Container>
-          <h2 className="sr-only">Latest Posts</h2>
+          <h2 className="sr-only">Posts</h2>
           <ul className={styles.posts}>
             {posts.map((post) => {
               return (
