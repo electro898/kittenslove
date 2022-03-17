@@ -187,15 +187,3 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-
-module.exports = {
-  async redirects() {
-    return [
-      {
-        source: '',
-        destination: 'http://positivityminds.com/',
-        permanent: true,
-      },
-    ]
-  },
-}
