@@ -36,7 +36,7 @@ export default function Post({ post, related }) {
   const { metadata: siteMetadata = {} } = useSite();
 
   if (!post.og) {
-    post.og = {};
+    post.og = `${featuredImage.sourceUrl}`;
   }
 
   post.og.imageUrl = `${featuredImage.sourceUrl}`;
