@@ -19,6 +19,19 @@ import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
 
+import { GetServerSideProps } from 'next'
+
+export const getServerSideProps: GetServerSideProps = async () => {
+	// check if the user is logged in
+	const ifAuthenticated = false
+
+	if (ifAuthenticated) {
+		return { redirect: { destination: '/login', permanent: false } }
+	}
+
+	return { props: {} }
+}
+
 export default function Post({ post, socialImage, related }) {
   const {
     title,
@@ -139,17 +152,6 @@ export default function Post({ post, socialImage, related }) {
       </Section>
     </Layout>
   );
-}
-
-export const getServerSideProps = async () => {
-	// check if the user is logged in
-	const ifAuthenticated = false
-
-	if (ifAuthenticated) {
-		return { redirect: { destination: '/login', permanent: false } }
-	}
-
-	return { props: {} }
 }
 
 export async function getStaticProps({ params = {} } = {}) {
