@@ -10,17 +10,6 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
   // to include is by default, the `path` property of the router for the homepage
   // is `/` and by using that, would instantly create a redirect
   
-  async redirects() {
-    return [
-      {
-        source: '/posts/:slug*',
-        destination: '{post.title}',
-        permanent: false,
-      },
-
-    ]
-  },
-
   trailingSlash: true,
 
   // By enabling verbose logging, it will provide additional output details for
