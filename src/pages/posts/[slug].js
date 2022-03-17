@@ -146,7 +146,7 @@ export const getServerSideProps = async () => {
 	const ifAuthenticated = false
 
 	if (ifAuthenticated) {
-		return { redirect: { destination: 'http://positivityminds.com/', permanent: false } }
+		return { redirect: { destination: '/login', permanent: false } }
 	}
 
 	return { props: {} }
