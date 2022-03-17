@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
-
+import Head from 'next/head'
 import { getPostBySlug, getAllPosts, getRelatedPosts, postPathBySlug } from 'lib/posts';
 import { categoryPathBySlug } from 'lib/categories';
 import { formatDate } from 'lib/datetime';
@@ -17,6 +17,19 @@ import Content from 'components/Content';
 import Metadata from 'components/Metadata';
 import FeaturedImage from 'components/FeaturedImage';
 import styles from 'styles/pages/Post.module.scss';
+
+function IndexPage() {
+  return (
+    <div>
+      <Head>
+        <title>My page title</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <p>Hello world!</p>
+    </div>
+  )
+}
+export default IndexPage
 
 export default function Post({ post, related }) {
   const {
