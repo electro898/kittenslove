@@ -30,7 +30,7 @@ function IndexPage() {
   )
 }
 
-export default function IndexPage Post({ post, related }) {
+export default function Post({ post, related }) {
   const {
     title,
     metaTitle,
