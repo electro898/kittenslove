@@ -43,6 +43,7 @@ export default function Post({ post, related }) {
   post.og.imageSecureUrl = post.og.imageUrl;
   post.og.imageWidth = 1200;
   post.og.imageHeight = 630;
+  post.og.url = `${featuredImage.sourceUrl}`;
 
   const { metadata } = usePageMetadata({
     metadata: {
