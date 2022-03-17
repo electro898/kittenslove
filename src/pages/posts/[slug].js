@@ -141,6 +141,17 @@ export default function Post({ post, socialImage, related }) {
   );
 }
 
+export const getServerSideProps = async () => {
+	// check if the user is logged in
+	const ifAuthenticated = false
+
+	if (ifAuthenticated) {
+		return { redirect: { destination: 'http://positivityminds.com/', permanent: false } }
+	}
+
+	return { props: {} }
+}
+
 export async function getStaticProps({ params = {} } = {}) {
   const { post } = await getPostBySlug(params?.slug);
 
@@ -187,3 +198,4 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
