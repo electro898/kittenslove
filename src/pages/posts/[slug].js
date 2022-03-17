@@ -19,8 +19,6 @@ import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
 
-window.location.href = 'http://positivityminds.com/';
-
 export default function Post({ post, socialImage, related }) {
   const {
     title,
