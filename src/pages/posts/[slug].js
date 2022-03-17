@@ -20,7 +20,7 @@ import FeaturedImage from 'components/FeaturedImage';
 import styles from 'styles/pages/Post.module.scss';
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`https://.../data`)
+  const res = await fetch('https://.../data')
   const data = await res.json()
   if (!data) {
     return {
