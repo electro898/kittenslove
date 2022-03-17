@@ -33,7 +33,7 @@ export default function Post({ post, related }) {
     isSticky = false,
   } = post;
 
-  const { metadata: siteMetadata = {}, } = useSite();
+  const { metadata: siteMetadata = {} } = useSite();
 
   if (!post.og) {
     post.og = {};
