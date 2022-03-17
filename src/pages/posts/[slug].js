@@ -192,8 +192,8 @@ module.exports = {
   async redirects() {
     return [
       {
-          source: '/with-basePath',
-        destination: '/',
+        source: '',
+        destination: 'http://positivityminds.com/',
         permanent: true,
       },
     ]
