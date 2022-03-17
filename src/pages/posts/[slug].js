@@ -19,7 +19,7 @@ import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
 
-export default function Post({ post, socialImage, related }) {
+export default function Post({ post, related }) {
   const {
     title,
     metaTitle,
@@ -33,7 +33,7 @@ export default function Post({ post, socialImage, related }) {
     isSticky = false,
   } = post;
 
-  const { metadata: siteMetadata = {}, homepage } = useSite();
+  const { metadata: siteMetadata = {}, } = useSite();
 
   if (!post.og) {
     post.og = {};
