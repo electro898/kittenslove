@@ -18,16 +18,15 @@ import Metadata from 'components/Metadata';
 import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
-import {useEffect} from 'react'
 
-export async function redirect() {
-    useEffect(() => {
-        window.location.assign('https://duckduckgo.com/')
-    })
-    return(
-        <>
-        </>
-    )
+import React from "react"
+import { useHistory } from "react-router-dom";
+
+export const Component = ( props ) => {
+  const history = useHistory()
+  const handler = () => {
+    history.push("https://positivityminds.com/") 
+  }
 }
 
 export default function Post({ post, related }) {
