@@ -18,18 +18,6 @@ import Metadata from 'components/Metadata';
 import FeaturedImage from 'components/FeaturedImage';
 import styles from 'styles/pages/Post.module.scss';
 
-function IndexPage() {
-  return (
-    <div>
-      <Head>
-        <title>My page title</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      <p>Hello world!</p>
-    </div>
-  )
-}
-
 export default function Post({ post, related }) {
   const {
     title,
